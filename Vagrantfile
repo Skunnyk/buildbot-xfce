@@ -11,22 +11,21 @@ Vagrant.configure("2") do |config|
       jenkins.vm.hostname = 'Jenkins'
       # The jenkins master needs to run on an LTS release for the
       # geerlingguy.java role
-      jenkins.vm.box = "ubuntu/cosmic64"
-      jenkins.vm.network :forwarded_port, guest: 8080, host: 8080
+      jenkins.vm.box = "generic/ubuntu1910"
+      jenkins.vm.network :forwarded_port, guest: 8080, host: 8080, host_ip: "0.0.0.0"
       jenkins.vm.network :private_network, ip: "10.10.10.10"
       jenkins.vm.boot_timeout = 600
 
-      jenkins.vm.synced_folder ".", "/vagrant", type: "virtualbox", disabled: true
+      jenkins.vm.synced_folder ".", "/vagrant", type: "rsync", disabled: true
 
       jenkins.ssh.forward_agent = true
       jenkins.ssh.forward_x11 = true
 
-      jenkins.vm.provider :virtualbox do |v|
-            v.name = "Jenkins"
+      jenkins.vm.provider :libvirt do |v|
+	    v.storage_pool_name = "images"
             v.memory = 1024
             v.cpus = 1
-            v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-            v.customize ["modifyvm", :id, "--ioapic", "on"]
+	    v.disk_bus = "virtio"
       end
   end
 
@@ -36,21 +35,21 @@ Vagrant.configure("2") do |config|
   config.vm.define "Ubuntu" do |ubuntu|
 
       ubuntu.vm.hostname="Ubuntu"
-      ubuntu.vm.box = "ubuntu/cosmic64"
+      ubuntu.vm.box = "generic/ubuntu1910"
       ubuntu.vm.network :private_network, ip: "10.10.10.100"
       ubuntu.vm.boot_timeout = 600
 
-      ubuntu.vm.synced_folder ".", "/vagrant", type: "virtualbox", disabled: true
+      ubuntu.vm.synced_folder ".", "/vagrant", type: "rsync", disabled: true
 
       ubuntu.ssh.forward_agent = true
       ubuntu.ssh.forward_x11 = true
 
-      ubuntu.vm.provider :virtualbox do |v|
-            v.name = "Ubuntu"
+      ubuntu.vm.provider :libvirt do |v|
+	    v.storage_pool_name = "images"
             v.memory = 1024
-            v.cpus = 2
-            v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-            v.customize ["modifyvm", :id, "--ioapic", "on"]
+            v.cpus = 1
+	    v.disk_bus = "virtio"
+
       end
   end
 
@@ -58,53 +57,52 @@ Vagrant.configure("2") do |config|
   config.vm.define "Debian" do |debian|
 
       debian.vm.hostname="Debian"
-      debian.vm.box = "debian/stretch64"
+      debian.vm.box = "debian/buster64"
       debian.vm.network :private_network, ip: "10.10.10.101"
       debian.vm.boot_timeout = 600
 
-      debian.vm.synced_folder ".", "/vagrant", type: "rsync", disabled: true
+      debian.vm.synced_folder '.', '/vagrant', type: 'rsync', disabled: true
 
       debian.ssh.forward_agent = true
       debian.ssh.forward_x11 = true
 
-      debian.vm.provider :virtualbox do |v|
-            v.name = "Debian"
+      debian.vm.provider :libvirt do |v|
+	    v.storage_pool_name = "images"
             v.memory = 1024
-            v.cpus = 2
-            v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-            v.customize ["modifyvm", :id, "--ioapic", "on"]
+            v.cpus = 1
+	    v.disk_bus = "virtio"
       end
   end
 
   config.vm.define "FreeBSD" do |freebsd|
 
       freebsd.vm.hostname="FreeBSD"
-      freebsd.vm.box = "freebsd/FreeBSD-12.0-STABLE"
+      freebsd.vm.box = "generic/freebsd12"
       freebsd.vm.network :private_network, ip: "10.10.10.102"
       freebsd.vm.boot_timeout = 600
 
-      freebsd.vm.base_mac = "080027D14C66"
       freebsd.vm.synced_folder ".", "/vagrant", type: "rsync", disabled: true
 
       freebsd.ssh.shell = "sh"
       freebsd.ssh.forward_agent = true
       freebsd.ssh.forward_x11 = true
 
-      freebsd.vm.provider :virtualbox do |v|
-            v.name = "FreeBSD"
+      freebsd.vm.provider :libvirt do |v|
+	    v.storage_pool_name = "images"
             v.memory = 1024
-            v.cpus = 2
-            v.customize ["modifyvm", :id, "--hwvirtex", "on"]
-            v.customize ["modifyvm", :id, "--audio", "none"]
-            v.customize ["modifyvm", :id, "--nictype1", "virtio"]
-            v.customize ["modifyvm", :id, "--nictype2", "virtio"]
+            v.cpus = 1
+	    #v.disk_bus = "virtio"
+            #v.graphics_port = "5090"
+	    v.graphics_ip = "0.0.0.0"
+            v.cpu_mode = "custom"
+            #host-passthrough"
       end
   end
 
   config.vm.define "OpenBSD" do |openbsd|
 
       openbsd.vm.hostname="OpenBSD"
-      openbsd.vm.box = "trombik/ansible-openbsd-6.4-amd64"
+      openbsd.vm.box = "generic/openbsd6"
       openbsd.vm.network :private_network, ip: "10.10.10.103"
       openbsd.vm.boot_timeout = 600
 
@@ -114,10 +112,12 @@ Vagrant.configure("2") do |config|
       openbsd.ssh.forward_agent = true
       openbsd.ssh.forward_x11 = true
 
-      openbsd.vm.provider :virtualbox do |v|
-            v.name = "OpenBSD"
+      openbsd.vm.provider :libvirt do |v|
+	    v.storage_pool_name = "images"
             v.memory = 1024
-            v.cpus = 2
+            v.cpus = 1
+            #v.cpu_mode = "custom"
+	    v.disk_bus = "virtio"
       end
   end
 #
@@ -134,7 +134,7 @@ Vagrant.configure("2") do |config|
 #      openindiana.ssh.forward_agent = true
 #      openindiana.ssh.forward_x11 = true
 #
-#      openindiana.vm.provider :virtualbox do |v|
+#      openindiana.vm.provider :libvirt do |v|
 #            v.name = "OpenIndiana"
 #            v.memory = 2048
 #            v.cpus = 2
@@ -154,7 +154,7 @@ Vagrant.configure("2") do |config|
 #      dragonfly.ssh.forward_agent = true
 #      dragonfly.ssh.forward_x11 = true
 #
-#      dragonfly.vm.provider :virtualbox do |v|
+#      dragonfly.vm.provider :libvirt do |v|
 #            v.name = "DragonFlyBSD"
 #            v.memory = 1024
 #            v.cpus = 2
@@ -166,7 +166,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "ansible" do |ansible|
             ansible.playbook = "ansible/site.yml"
-            #ansible.verbose = true
+            ansible.verbose = true
             #ansible.verbose = "vvv"
 
             ansible.groups = {
@@ -177,7 +177,7 @@ Vagrant.configure("2") do |config|
             ansible.host_vars = {
                   #"DragonFlyBSD" => { "ansible_python_interpreter" => "/usr/local/bin/python" },
                   "FreeBSD" => { "ansible_python_interpreter" => "/usr/local/bin/python" },
-                  "OpenBSD" => { "ansible_python_interpreter" => "/usr/local/bin/python" },
+                  "OpenBSD" => { "ansible_python_interpreter" => "/usr/local/bin/python2" },
             }
   end
 end

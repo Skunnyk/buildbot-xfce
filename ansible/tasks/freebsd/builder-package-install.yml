@@ -50,3 +50,5 @@
                 - taglib
                 - cmake
                 - pygobject3-common
+                - libisofs
+                - libburn

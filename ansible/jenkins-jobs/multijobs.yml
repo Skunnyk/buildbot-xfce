@@ -178,6 +178,11 @@
                   kill-phase-on: NEVER
                   abort-all-job: false
                   current-parameters: true
+
+                - name: xfburn
+                  kill-phase-on: NEVER
+                  abort-all-job: false
+                  current-parameters: true
         - multijob:
             name: thunar-plugins
             condition: ALWAYS

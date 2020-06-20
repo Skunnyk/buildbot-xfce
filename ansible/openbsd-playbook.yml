@@ -3,7 +3,13 @@
   hosts: OpenBSD
   become: yes
   remote_user: root
-  gather_facts: yes
+  gather_facts: no
+  pre_tasks:
+    - name: install python2, ansible requires it
+      raw: test -e /usr/local/bin/python2 || (pkg_add -I python-2.7.18p0)
+      register: output
+      changed_when: output.stdout != ""
+      tags: always
 
   vars_files:
     - vars/common_vars.yml

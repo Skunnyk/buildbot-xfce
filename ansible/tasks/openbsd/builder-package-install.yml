@@ -8,10 +8,9 @@
             - bash
             - autoconf-2.69p2
             - automake-1.15.1
-            - jdk
-            - jre
+            - jdk-11.0.7.10.2p0v0
             - intltool
-            - gettext
+            - gettext-runtime
             - libtool
             - gmake
             - gtk-doc
@@ -42,3 +41,5 @@
             - taglib
             - cmake
             - py3-gobject3
+            - libburn
+            - libisofs

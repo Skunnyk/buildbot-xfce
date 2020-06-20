@@ -6,244 +6,248 @@
     jobs:
       - '{name}':
           name: xfce4-dev-tools
-          url: git://git.xfce.org/xfce/xfce4-dev-tools
+          url: https://gitlab.xfce.org/xfce/xfce4-dev-tools
 
       - '{name}':
           name: libxfce4util
-          url: git://git.xfce.org/xfce/libxfce4util
+          url: https://gitlab.xfce.org/xfce/libxfce4util
 
       - '{name}':
           name: libxfce4ui
-          url: git://git.xfce.org/xfce/libxfce4ui
+          url: https://gitlab.xfce.org/xfce/libxfce4ui
 
       - '{name}':
           name: xfconf
-          url: git://git.xfce.org/xfce/xfconf
+          url: https://gitlab.xfce.org/xfce/xfconf
 
       - '{name}':
           name: exo
-          url: git://git.xfce.org/xfce/exo
+          url: https://gitlab.xfce.org/xfce/exo
 
       - '{name}':
           name: garcon
-          url: git://git.xfce.org/xfce/garcon
+          url: https://gitlab.xfce.org/xfce/garcon
 
       - '{name}':
           name: tumbler
-          url: git://git.xfce.org/xfce/tumbler
+          url: https://gitlab.xfce.org/xfce/tumbler
 
       - '{name}':
           name: thunar
-          url: git://git.xfce.org/xfce/thunar
+          url: https://gitlab.xfce.org/xfce/thunar
 
       - '{name}':
           name: xfdesktop
-          url: git://git.xfce.org/xfce/xfdesktop
+          url: https://gitlab.xfce.org/xfce/xfdesktop
 
       - '{name}':
           name: xfce4-appfinder
-          url: git://git.xfce.org/xfce/xfce4-appfinder
+          url: https://gitlab.xfce.org/xfce/xfce4-appfinder
 
       - '{name}':
           name: xfce4-panel
-          url: git://git.xfce.org/xfce/xfce4-panel
+          url: https://gitlab.xfce.org/xfce/xfce4-panel
 
       - '{name}':
           name: xfce4-power-manager
-          url: git://git.xfce.org/xfce/xfce4-power-manager
+          url: https://gitlab.xfce.org/xfce/xfce4-power-manager
 
       - '{name}':
           name: xfce4-settings
-          url: git://git.xfce.org/xfce/xfce4-settings
+          url: https://gitlab.xfce.org/xfce/xfce4-settings
 
       - '{name}':
           name: xfwm4
-          url: git://git.xfce.org/xfce/xfwm4
+          url: https://gitlab.xfce.org/xfce/xfwm4
 
       - '{name}':
           name: xfce4-session
-          url: git://git.xfce.org/xfce/xfce4-session
+          url: https://gitlab.xfce.org/xfce/xfce4-session
 
       - '{name}':
           name: gigolo
-          url: git://git.xfce.org/apps/gigolo
+          url: https://gitlab.xfce.org/apps/gigolo
 
       - '{name}':
           name: parole
-          url: git://git.xfce.org/apps/parole
+          url: https://gitlab.xfce.org/apps/parole
 
       - '{name}':
           name: ristretto
-          url: git://git.xfce.org/apps/ristretto
+          url: https://gitlab.xfce.org/apps/ristretto
 
       - '{name}':
           name: xfce4-notifyd
-          url: git://git.xfce.org/apps/xfce4-notifyd
+          url: https://gitlab.xfce.org/apps/xfce4-notifyd
 
       - '{name}':
           name: xfce4-panel-profiles
-          url: git://git.xfce.org/apps/xfce4-panel-profiles
+          url: https://gitlab.xfce.org/apps/xfce4-panel-profiles
 
       - '{name}':
           name: xfce4-screensaver
-          url: git://git.xfce.org/apps/xfce4-screensaver
+          url: https://gitlab.xfce.org/apps/xfce4-screensaver
 
       - '{name}':
           name: xfce4-screenshooter
-          url: git://git.xfce.org/apps/xfce4-screenshooter
+          url: https://gitlab.xfce.org/apps/xfce4-screenshooter
 
       - '{name}':
           name: xfce4-taskmanager
-          url: git://git.xfce.org/apps/xfce4-taskmanager
+          url: https://gitlab.xfce.org/apps/xfce4-taskmanager
 
       - '{name}':
           name: xfce4-terminal
-          url: git://git.xfce.org/apps/xfce4-terminal
+          url: https://gitlab.xfce.org/apps/xfce4-terminal
 
       - '{name}':
           name: xfdashboard
-          url: git://git.xfce.org/apps/xfdashboard
+          url: https://gitlab.xfce.org/apps/xfdashboard
 
       - '{name}':
           name: mousepad
-          url: git://git.xfce.org/apps/mousepad
+          url: https://gitlab.xfce.org/apps/mousepad
 
       - '{name}':
           name: xfce4-dict
-          url: git://git.xfce.org/apps/xfce4-dict
+          url: https://gitlab.xfce.org/apps/xfce4-dict
 
       - '{name}':
           name: xfce4-volumed-pulse
-          url: git://git.xfce.org/apps/xfce4-volumed-pulse
+          url: https://gitlab.xfce.org/apps/xfce4-volumed-pulse
 
       - '{name}':
           name: xfmpc
-          url: git://git.xfce.org/apps/xfmpc
+          url: https://gitlab.xfce.org/apps/xfmpc
+
+      - '{name}':
+          name: xfburn
+          url: https://gitlab.xfce.org/apps/xfburn
 
       - '{name}':
           name: xfce4-battery-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-battery-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-battery-plugin
 
       - '{name}':
           name: xfce4-calculator-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-calculator-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-calculator-plugin
 
       - '{name}':
           name: xfce4-clipman-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-clipman-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-clipman-plugin
 
       - '{name}':
           name: xfce4-cpufreq-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-cpufreq-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-cpufreq-plugin
 
       - '{name}':
           name: xfce4-datetime-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-datetime-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin
 
       - '{name}':
           name: xfce4-diskperf-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-datetime-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin
 
       - '{name}':
           name: xfce4-embed-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-embed-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-embed-plugin
 
       - '{name}':
           name: xfce4-eyes-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-eyes-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin
 
       - '{name}':
           name: xfce4-fsguard-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-fsguard-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-fsguard-plugin
 
       - '{name}':
           name: xfce4-generic-slider
-          url: git://git.xfce.org/panel-plugins/xfce4-generic-slider
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-generic-slider
 
       - '{name}':
           name: xfce4-genmon-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-genmon-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-genmon-plugin
 
       - '{name}':
           name: xfce4-hardware-monitor-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-hardware-monitor-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-hardware-monitor-plugin
 
       - '{name}':
           name: xfce4-indicator-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-indicator-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-indicator-plugin
 
       - '{name}':
           name: xfce4-mount-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-mount-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-mount-plugin
 
       - '{name}':
           name: xfce4-mpc-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-mpc-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-mpc-plugin
 
       - '{name}':
           name: xfce4-sensors-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-sensors-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-sensors-plugin
 
       - '{name}':
           name: xfce4-pulseaudio-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-pulseaudio-plugin
 
       - '{name}':
           name: xfce4-netload-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-netload-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-netload-plugin
 
       - '{name}':
           name: xfce4-notes-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-notes-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-notes-plugin
 
       - '{name}':
           name: xfce4-places-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-places-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-places-plugin
 
       - '{name}':
           name: xfce4-smartbookmark-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-smartbookmark-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-smartbookmark-plugin
 
       - '{name}':
           name: xfce4-systemload-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-systemload-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-systemload-plugin
 
       - '{name}':
           name: xfce4-verve-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-verve-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-verve-plugin
 
       - '{name}':
           name: xfce4-wavelan-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-wavelan-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-wavelan-plugin
 
       - '{name}':
           name: xfce4-weather-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-weather-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-weather-plugin
 
       - '{name}':
           name: xfce4-whiskermenu-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-whiskermenu-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-whiskermenu-plugin
 
       - '{name}':
           name: xfce4-xkb-plugin
-          url: git://git.xfce.org/panel-plugins/xfce4-xkb-plugin
+          url: https://gitlab.xfce.org/panel-plugins/xfce4-xkb-plugin
 
       - '{name}':
           name: thunar-archive-plugin
-          url: git://git.xfce.org/thunar-plugins/thunar-archive-plugin
+          url: https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin
 
       - '{name}':
           name: thunar-media-tags-plugin
-          url: git://git.xfce.org/thunar-plugins/thunar-media-tags-plugin
+          url: https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin
 
       - '{name}':
           name: thunar-shares-plugin
-          url: git://git.xfce.org/thunar-plugins/thunar-shares-plugin
+          url: https://gitlab.xfce.org/thunar-plugins/thunar-shares-plugin
 
       - '{name}':
           name: thunar-vcs-plugin
-          url: git://git.xfce.org/thunar-plugins/thunar-vcs-plugin
+          url: https://gitlab.xfce.org/thunar-plugins/thunar-vcs-plugin
 
       - '{name}':
           name: thunarx-python
-          url: git://git.xfce.org/bindings/thunarx-python
+          url: https://gitlab.xfce.org/bindings/thunarx-python

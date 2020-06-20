@@ -50,4 +50,5 @@
 
     - name: add the jobs to jenkins
       command: jenkins-jobs update --delete-old /home/{{jenkins_user}}/jenkins_jobs/
+      tags: jenkins-jobs
 
